@@ -1,1 +1,1 @@
-web: flask init-db; pip install -r requirements.txt; gunicorn app.py
+web: flask init-db; pip install -r requirements.txt; gunicorn app:app

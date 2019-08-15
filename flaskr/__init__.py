@@ -41,3 +41,10 @@ def create_app(test_config=None):
     app.add_url_rule('/', endpoint='index')
 
     return app
+
+if __name__ == "__main__":
+    app = create_app()
+    port = int(os.environ.get('PORT', 4000))
+    print(f'ATTEMPTING TO RUN APP ON PORT: {port}')
+
+    app.run(host='0.0.0.0', port=port)
