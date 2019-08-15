@@ -1,6 +1,8 @@
 import os
 from flask import Flask
 from . import db
+from . import auth
+from . import blog
 
 def create_app(test_config=None):
     # create and configure the app
@@ -28,5 +30,15 @@ def create_app(test_config=None):
     def hello():
         return 'Hello, boo!'
 
+    # Init the database
     db.init_app(app)
+
+    # Authentication blueprint
+    app.register_blueprint(auth.bp)
+
+    # Blog Blueprint
+    app.register_blueprint(blog.bp)
+    app.add_url_rule('/', endpoint='index')
+
+
     return app
