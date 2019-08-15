@@ -9,7 +9,8 @@ Combined with spacy's recently released transformer models.
 
 ### Achieved
 - Image Captioning, CNN encoder, RNN decoder with attention.
-- Sentence Similarity, done simply with spacy in python. Transformers appeared promising, but the spacy python transformer library kept braking everything.
+- Sentence Similarity, done simply with spacy in python. Transformers appeared promising, but the spacy python transformer library seems to be a bit unstable.
+- Gained some familiarity with flask, although not quite enough to get it working with Heroku.
 
 
 ### Future Work
