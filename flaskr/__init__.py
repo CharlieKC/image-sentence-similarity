@@ -43,3 +43,9 @@ def create_app(test_config=None):
     port = int(os.environ.get('PORT', 4000))
 
     return app
+
+if __name__ == "__main__":
+    app = create_app()
+    port = int(os.environ.get('PORT', 4000))
+    app.run(host='0.0.0.0', port=port)
+    print(f'app running, {port}')
